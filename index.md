@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Savepoint"
-  text: "A personal web note."
+  text: "A Personal Notes"
   tagline: My great project tagline
   actions:
     - theme: brand
