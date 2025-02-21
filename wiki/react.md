@@ -1,6 +1,7 @@
 # Reactプロジェクトのベストプラクティス
 
 ## StrictModeを有効にする
+https://ja.react.dev/reference/react/StrictMode  
 StrictModeを有効にするには、アプリケーションのエントリポイントでStrictModeコンポーネントを使用する。
 
 ```jsx
