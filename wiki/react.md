@@ -10,7 +10,7 @@ description:
 
 ## 基本方針
 
-下記のの考え方を適用することでReactプロジェクトの信頼性、保守性、テスト容易性が向上し、予測可能な動作を実現します。
+Reactプロジェクトの信頼性、保守性、テスト容易性の向上と予測可能な動作を重視するために、以下の方針を守ってコーディングを行う。
 
 - `React.StrictMode` を有効にすることで、React特有の問題を検出しやすくし、事前に解決します。
     - `StrictMode` は、Reactアプリケーション内の潜在的な問題を見つけるためのツールです。
@@ -24,6 +24,7 @@ description:
 - 参照透明性を確保できない場合(Reactの外部の副作用を伴う処理)に限り、React Hooksやライブラリのフック関数を利用したり、カスタムフックに隔離する。
     - カスタムフックは、関連のあるロジックをまとめることで、コンポーネントの責任を明確にし、メンテナンス性やテスト容易性を高める。
 
+---
 ## 1. StrictModeを使用する
 
 **理由**  
@@ -53,8 +54,6 @@ ReactDOM.render(
   document.getElementById('root')
 );
 ```
-
----
 
 ## 2. 関数コンポーネントを採用する
 
@@ -86,8 +85,6 @@ const MyComponent = () => {
 export default MyComponent;
 ```
 
----
-
 ## 3. Hooksをトップレベルで記述する
 
 **理由**  
@@ -116,8 +113,6 @@ const MyComponent = () => {
   return <div>Count: {count}</div>;
 };
 ```
-
----
 
 ## 4. 状態を適切な粒度で管理する
 
@@ -248,8 +243,6 @@ const Parent = () => {
 export default Parent;
 ```
 
----
-
 ## 6. グローバル状態を管理する
 
 **理由**  
@@ -297,8 +290,6 @@ export default App;
 ```
 
 *※ 中規模以上の場合は Zustand などのライブラリも検討してください。*
-
----
 
 ## 7. 非同期処理を正しく扱う
 
@@ -356,8 +347,6 @@ const MyComponent = () => {
 export default MyComponent;
 ```
 
----
-
 ## 8. 副作用を正しく扱う
 
 **理由**  
@@ -393,8 +382,6 @@ const MyComponent = ({ a, b }) => {
 
 export default MyComponent;
 ```
-
----
 
 ## 9. カスタムフックに切り出す
 
@@ -458,8 +445,6 @@ const ComponentA = () => {
 export default ComponentA;
 ```
 
----
-
 ## 10. 依存配列を正確に記述する
 
 **理由**  
@@ -501,8 +486,6 @@ const MyComponent = ({ propValue }) => {
 export default MyComponent;
 ```
 
----
-
 ## 11. パフォーマンス最適化を必要な時のみ行う
 
 **理由**  
@@ -535,8 +518,6 @@ const MyComponent = ({ value, onClick }) => {
 
 export default MyComponent;
 ```
-
----
 
 ## 12. サーバー状態を管理する
 
@@ -584,8 +565,6 @@ const MyComponent = () => {
 export default MyComponent;
 ```
 
----
-
 ## 13. 参照透明性と冪等性を確保する
 
 **理由**  
@@ -622,8 +601,6 @@ export default MyComponent;
 ```
 
 ---
----
-
 ## プロンプト
 
 下記の内容でReactプロジェクトの実装者向けのコーディング規約を作成してください。
